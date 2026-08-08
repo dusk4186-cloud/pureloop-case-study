@@ -1,0 +1,309 @@
+/* ============================
+   PureLoop Case Study — Print / PDF Styles
+   Dark mode preserved — optimized for A4 portrait
+   ============================ */
+
+@media print {
+  /* ─── FORCE BACKGROUND COLORS ─── */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* ─── DARK THEME ─── */
+  html,
+  body {
+    background: #0a1628 !important;
+    background-color: #0a1628 !important;
+    color: var(--clr-text) !important;
+    font-size: 11pt !important;
+    line-height: 1.6 !important;
+  }
+
+  /* ─── HIDE INTERACTIVE ELEMENTS ─── */
+  .nav,
+  .toc,
+  .cta-section,
+  .cta-btn,
+  .hero__bg-orb-1,
+  .hero__bg-orb-2,
+  .hero__bg-orb-3 {
+    display: none !important;
+  }
+
+  /* ─── CRITICAL FIX 1: overflow:hidden clips content at page boundaries ─── */
+  *,
+  .hero,
+  .glass-card,
+  .screen-showcase__frame,
+  .section,
+  .section--alt,
+  .section__container,
+  .container,
+  .intro-grid,
+  .intro__image,
+  .scope-card,
+  .scope-grid,
+  .challenge-card,
+  .objectives-list,
+  .persona-section,
+  .palette-section {
+    overflow: visible !important;
+  }
+
+  /* ─── CRITICAL FIX 2: Kill viewport/min heights ─── */
+  .hero {
+    min-height: auto !important;
+    height: auto !important;
+    padding: 20pt 1rem !important;
+    position: relative !important;
+  }
+
+  .section {
+    padding: 20pt 1rem !important;
+    min-height: auto !important;
+    height: auto !important;
+    position: relative !important;
+  }
+
+  /* ─── CRITICAL FIX 3: Section headers stay together ─── */
+  .section__header {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* ─── CRITICAL FIX 4: Force ALL reveal elements visible ───
+     .reveal starts at opacity:0 + translateY(40px).
+     JS adds .visible class only on scroll — never fires for
+     off-screen elements during print. We must override BOTH
+     the base .reveal state AND the transition-delays. */
+  .reveal,
+  .reveal.visible,
+  .reveal-delay-1,
+  .reveal-delay-2,
+  .reveal-delay-3,
+  .reveal-delay-4,
+  .reveal-delay-5,
+  .reveal-delay-6 {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    transition-delay: 0s !important;
+    animation: none !important;
+  }
+
+  /* ─── DARK BACKGROUNDS on key sections ─── */
+  .section--alt {
+    background: var(--clr-surface, #111c2d) !important;
+    background-color: var(--clr-surface, #111c2d) !important;
+  }
+
+  /* ─── HEADINGS: never orphan from their content ─── */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* ─── BRAND COLORS ─── */
+  .hero__title em {
+    -webkit-text-fill-color: #0D9488 !important;
+    color: #0D9488 !important;
+  }
+
+  .hero__tagline {
+    color: #0D9488 !important;
+  }
+
+  .hero__badge {
+    border: 1.5pt solid #0D9488 !important;
+    color: #0D9488 !important;
+    background: rgba(0, 231, 210, 0.08) !important;
+  }
+
+  .hero__stat-number {
+    -webkit-text-fill-color: #456580 !important;
+    color: #456580 !important;
+    font-size: 18pt !important;
+  }
+
+  .hero__image::before {
+    display: none !important;
+  }
+
+  .hero__image img {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
+    border: 1px solid var(--clr-border, rgba(255,255,255,0.1)) !important;
+  }
+
+  .section__label {
+    color: #0D9488 !important;
+  }
+
+  .section__label::before,
+  .section__label::after {
+    background: #0D9488 !important;
+  }
+
+  .section__title em,
+  .objective-item__number {
+    -webkit-text-fill-color: #0D9488 !important;
+    color: #0D9488 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+  }
+
+  /* ─── GLASS CARDS: flatten for print ─── */
+  .glass-card {
+    background: var(--clr-surface, #111c2d) !important;
+    background-color: var(--clr-surface, #111c2d) !important;
+    border: 1px solid var(--clr-border, rgba(255,255,255,0.1)) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  .glass-card::before {
+    display: none !important;
+  }
+
+  .glass-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  /* ─── OBJECTIVE ITEMS: tighten spacing ─── */
+  .objectives-list {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  .objective-item {
+    padding: 0.75rem !important;
+  }
+
+  /* ─── SCOPE GRID ─── */
+  .scope-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+  }
+
+  /* ─── INTRO GRID (Wireframes) ─── */
+  .intro-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* ─── EMPATHY GRID ─── */
+  .empathy-card {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    padding: 1.5rem !important;
+  }
+
+  .empathy-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .empathy-grid > div {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* ─── CHALLENGE CARDS ─── */
+  .challenges-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .challenge-card {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    padding: 1.5rem !important;
+  }
+
+  .challenge-card__icon {
+    border: 1.5px solid var(--clr-border, rgba(255,255,255,0.1)) !important;
+  }
+
+  /* ─── PERSONA ─── */
+  .persona-card__info .tag {
+    color: #0D9488 !important;
+  }
+
+  .persona-section {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* ─── SCOPE CARD LIST ─── */
+  .scope-card__list li::before {
+    color: #0D9488 !important;
+  }
+
+  .divider {
+    background: #0D9488 !important;
+  }
+
+  /* ─── SCREEN SHOWCASES ─── */
+  .screen-showcase__frame {
+    box-shadow: none !important;
+    border: 1px solid var(--clr-border, rgba(255,255,255,0.1)) !important;
+  }
+
+  /* ─── COLOR SWATCHES ─── */
+  .swatch__color {
+    border: 1.5px solid var(--clr-border, rgba(255,255,255,0.1)) !important;
+  }
+
+  /* ─── TYPOGRAPHY PREVIEW ─── */
+  .type-sample--mono {
+    color: #0D9488 !important;
+  }
+
+  /* ─── FOOTER: glue to previous page ─── */
+  .footer {
+    border-top: 1pt solid var(--clr-border, rgba(255,255,255,0.1)) !important;
+    color: var(--clr-text-muted) !important;
+    page-break-before: avoid !important;
+    break-before: avoid !important;
+    margin-top: 0 !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  /* ─── IMAGES ─── */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* ─── LINKS ─── */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: var(--clr-text-muted);
+    font-weight: 400;
+    word-break: break-all;
+  }
+
+  /* ─── SELECTIVE PAGE-BREAK (small elements only) ─── */
+  .screen-showcase {
+    page-break-inside: avoid;
+  }
+
+  /* Strip gradient text clips that go invisible on print */
+  .nav__logo span,
+  .hero__title em,
+  .section__title em,
+  .hero__stat-number,
+  .objective-item__number {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+  }
+}

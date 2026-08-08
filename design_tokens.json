@@ -1,0 +1,44 @@
+{
+  "_comment": "PureLoop — Laundry App Case Study. Pass via: python push_to_figma.py screen.html --tokens C:\\Users\\ASUS\\.gemini\antigravity\\scratch\\laundry-case-study",
+  "project": "PureLoop",
+  "colors": {
+    "--background": "#F8FAFC",
+    "--foreground": "#0F172A",
+    "--card": "#FFFFFF",
+    "--elevated": "#F1F5F9",
+    "--alt": "#E2E8F0",
+    "--text-primary": "#0F172A",
+    "--text-secondary": "#64748B",
+    "--text-muted": "#94A3B8",
+    "--primary": "#007367",
+    "--action-secondary": "#0F172A",
+    "--border": "#E2E8F0"
+  },
+  "colors_dark": {
+    "--background": "#060e17",
+    "--foreground": "#e0eaf0",
+    "--card": "#0A1624",
+    "--elevated": "#122236",
+    "--alt": "#0b1824",
+    "--text-primary": "#e0eaf0",
+    "--text-secondary": "#8fa8bc",
+    "--text-muted": "#5a7a8e",
+    "--primary": "#00E7D2",
+    "--action-secondary": "#4D78D3",
+    "--border": "#1E293B"
+  },
+  "typography": {
+    "--text-sm": "13px",
+    "--text-base": "16px",
+    "--text-lg": "20px",
+    "--text-xl": "24px",
+    "--text-2xl": "32px"
+  },
+  "radius": {
+    "--radius-sm": "8px",
+    "--radius-md": "12px",
+    "--radius-lg": "16px",
+    "--radius-xl": "24px",
+    "--radius-full": "999px"
+  }
+}
