@@ -29,6 +29,8 @@
       </div>
       <ul class="nav__links">
         <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#why-this-approach">Approach</a></li>
+        <li><a href="#objectives">Objectives</a></li>
         <li><a href="#user-flow">Process</a></li>
         <li><a href="#screens">V1: Concept</a></li>
         <li><a href="#screens-v2">V2: Live App</a></li>
@@ -88,6 +90,7 @@
       <!-- Table of Contents -->
       <div class="toc" style="margin-top: 3.5rem;">
         <a href="#introduction" class="toc__item">📖 Introduction</a>
+        <a href="#why-this-approach" class="toc__item">💡 Why This Approach</a>
         <a href="#objectives" class="toc__item">🎯 Objectives</a>
         <a href="#audience" class="toc__item">👥 Target Audience</a>
         <a href="#scope" class="toc__item">📐 Scope of Work</a>
@@ -170,6 +173,39 @@
           <div class="challenge-card__icon">💳</div>
           <div class="challenge-card__title">Payment Hassle</div>
           <div class="challenge-card__desc">Cash-only models and lack of digital payment options create friction in transactions.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why This Approach ===== -->
+  <section class="section" id="why-this-approach">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__label">Design Strategy</div>
+        <h2 class="section__title">Why This <em>Approach</em></h2>
+        <p class="section__subtitle">
+          Connecting booking, order tracking, and transparent payments into a single high-trust system.
+        </p>
+      </div>
+
+      <div class="glass-card reveal" style="padding: 2.5rem; border-left: 4px solid var(--color-action-primary); background: linear-gradient(145deg, rgba(0, 231, 210, 0.03), rgba(77, 120, 211, 0.03));">
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--color-text-primary);">
+            I designed the booking flow, order-status tracking, and multi-payment support as <strong>one connected system</strong>, because trust in this category comes from visibility at every step — directly answering the <em>Order Tracking</em> and <em>Trust &amp; Quality</em> gaps above. Navigation throughout the app uses consistent segmented controls for switching between order status, service type, and pickup timing, since the target audience uses both Android and iOS devices.
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--color-text-primary);">
+            I also introduced a <strong>buffer amount charged upfront</strong> during online payment — covering minor weight or item-count differences discovered at pickup, so the user isn't hit with a surprise charge and the provider isn't stuck chasing extra payment. If the actual difference exceeds the buffer, the remaining amount carries forward and is itemized in the next order's payment summary.
+          </p>
+          <div style="height: 1px; background: rgba(0, 231, 210, 0.12); margin: 0.5rem 0;"></div>
+          <div style="background: rgba(0, 231, 210, 0.06); border: 1px solid rgba(0, 231, 210, 0.2); border-radius: 14px; padding: 1.25rem 1.5rem;">
+            <h4 style="color: var(--color-action-primary); font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-size: 1.2rem;">⚡</span> Engineering &amp; Debugging Highlight
+            </h4>
+            <p style="font-size: 0.98rem; line-height: 1.7; color: var(--color-text-primary); margin: 0;">
+              I carried this through a live, functional build spanning 15+ screens — during which I caught a real bug: city-matching was failing due to unreliable substring parsing, breaking search accuracy. I fixed it by replacing that logic with a structured city field.
+            </p>
+          </div>
         </div>
       </div>
     </div>
