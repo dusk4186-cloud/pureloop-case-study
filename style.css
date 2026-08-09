@@ -162,17 +162,11 @@ a:hover { color: var(--color-action-secondary); }
 
 .nav__logo span {
   color: var(--color-action-primary);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-}
-
-.fonts-loaded .nav__logo span {
   background: var(--grad-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: inline-block;
 }
 
 .nav__links {
@@ -319,13 +313,6 @@ a:hover { color: var(--color-action-secondary); }
 .hero__title em {
   font-style: italic;
   color: var(--color-action-primary);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-}
-
-.fonts-loaded .hero__title em {
   background: var(--grad-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -383,13 +370,6 @@ a:hover { color: var(--color-action-secondary); }
   font-size: 2rem;
   font-weight: 800;
   color: var(--color-action-primary);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-}
-
-.fonts-loaded .hero__stat-number {
   background: var(--grad-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -448,13 +428,6 @@ a:hover { color: var(--color-action-secondary); }
 .section__title em {
   font-style: italic;
   color: var(--color-action-primary);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-}
-
-.fonts-loaded .section__title em {
   background: var(--grad-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
