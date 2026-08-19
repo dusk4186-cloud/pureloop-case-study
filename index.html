@@ -5,18 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="PureLoop — A UX/UI Case Study for a mobile laundry service app connecting residents with reliable laundry and ironing providers in Tier 1 & 2 cities.">
   <title>PureLoop — UX/UI Case Study | Refresh. Rinse. Repeat.</title>
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500&display=swap">
+  
+  <!-- Preload Critical LCP Hero Image -->
+  <link rel="preload" as="image" href="hero.webp" fetchpriority="high">
+  
   <link rel="stylesheet" href="style.css?v=2">
   <link rel="stylesheet" href="print.css" media="print">
-  <script>
-    // Fix Google Font-swap layout recalculation bug for gradient text
-    if ('fonts' in document) {
-      document.fonts.ready.then(function () {
-        document.documentElement.classList.add('fonts-loaded');
-      });
-    } else {
-      document.documentElement.classList.add('fonts-loaded');
-    }
-  </script>
 </head>
 <body>
 
@@ -83,7 +82,7 @@
           </div>
         </div>
         <div class="hero__image">
-          <img src="hero.png" alt="PureLoop App — Hero Illustration" loading="eager">
+          <img src="hero.webp" alt="PureLoop App — Hero Illustration" loading="eager" fetchpriority="high" decoding="async">
         </div>
       </div>
 
@@ -138,7 +137,7 @@
           </p>
         </div>
         <div class="intro__image">
-          <img src="problem.png" alt="Urban laundry problem illustration" loading="lazy">
+          <img src="problem.webp" alt="Urban laundry problem illustration" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -282,7 +281,7 @@
 
       <div class="persona-section reveal">
         <div class="persona-visual">
-          <img src="personas.png" alt="User personas for PureLoop" loading="lazy">
+          <img src="personas.webp" alt="User personas for PureLoop" loading="lazy" decoding="async">
         </div>
         <div class="persona-cards">
           <div class="persona-card glass-card">
@@ -429,7 +428,7 @@
 
       <div class="intro-grid reveal">
         <div class="intro__image">
-          <img src="user-flow.png" alt="PureLoop user journey flow diagram" loading="lazy">
+          <img src="user-flow.webp" alt="PureLoop user journey flow diagram" loading="lazy" decoding="async">
         </div>
         <div class="intro__content">
           <h3>From Discovery to Delivery</h3>
@@ -466,13 +465,13 @@
       <div class="intro-grid reveal" style="align-items: start;">
         <div class="screen-showcase">
           <div class="screen-showcase__frame">
-            <img src="wireframe-1.png" alt="PureLoop Initial Wireframes - Part 1">
+            <img src="wireframe-1.webp" alt="PureLoop Initial Wireframes - Part 1" loading="lazy" decoding="async">
           </div>
           <p class="screen-showcase__caption">Onboarding, Login, Profile, and Home Screen layouts</p>
         </div>
         <div class="screen-showcase">
           <div class="screen-showcase__frame">
-            <img src="wireframe-2.png" alt="PureLoop Initial Wireframes - Part 2">
+            <img src="wireframe-2.webp" alt="PureLoop Initial Wireframes - Part 2" loading="lazy" decoding="async">
           </div>
           <p class="screen-showcase__caption">Laundry Listings, Booking, Payment, Tracker, and Reviews</p>
         </div>
@@ -630,7 +629,7 @@
         </div>
         <div class="screen-showcase">
           <div class="screen-showcase__frame">
-            <img src="images/screens-auth.png" alt="PureLoop — Splash, Profile, Welcome, Login, and Sign Up screens">
+            <img src="images/screens-auth.webp" alt="PureLoop — Splash, Profile, Welcome, Login, and Sign Up screens" loading="lazy" decoding="async">
           </div>
           <p class="screen-showcase__caption">Splash Screen → Profile Page → Welcome Onboard → Login → Sign Up</p>
         </div>
@@ -644,7 +643,7 @@
         </div>
         <div class="screen-showcase">
           <div class="screen-showcase__frame">
-            <img src="images/screens-main.png" alt="PureLoop — Home Screen, Provider Profiles, Pricing, Booking">
+            <img src="images/screens-main.webp" alt="PureLoop — Home Screen, Provider Profiles, Pricing, Booking" loading="lazy" decoding="async">
           </div>
           <p class="screen-showcase__caption">Home Screen → Service Provider → Pricing → Booking &amp; Scheduling</p>
         </div>
@@ -658,7 +657,7 @@
         </div>
         <div class="screen-showcase">
           <div class="screen-showcase__frame">
-            <img src="images/screens-order.png" alt="PureLoop — Booking, Payment, Success, Review, and Order Status screens">
+            <img src="images/screens-order.webp" alt="PureLoop — Booking, Payment, Success, Review, and Order Status screens" loading="lazy" decoding="async">
           </div>
           <p class="screen-showcase__caption">Booking Details → Payment Selection → Success → Review → Order Status Tracker</p>
         </div>
@@ -672,7 +671,7 @@
         </div>
         <div class="screen-showcase">
           <div class="screen-showcase__frame">
-            <img src="images/screens-components.png" alt="PureLoop — UI components">
+            <img src="images/screens-components.webp" alt="PureLoop — UI components" loading="lazy" decoding="async">
           </div>
           <p class="screen-showcase__caption">Rating System · Checkboxes · Pricing Tags · Input Fields · Toggle States · Buttons</p>
         </div>
@@ -699,11 +698,11 @@
         </div>
         <div class="screen-showcase" style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
           <div class="screen-showcase__item" style="flex: 1; min-width: 180px; max-width: 220px;">
-            <img src="images/v2-splash.png" alt="PureLoop V2 — Splash Screen" style="border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); width: 100%; display: block;">
+            <img src="images/v2-splash.webp" alt="PureLoop V2 — Splash Screen" style="border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); width: 100%; display: block;" loading="lazy" decoding="async">
             <p class="screen-showcase__caption" style="text-align: center; margin-left: 20px;">Dynamic Loading State</p>
           </div>
           <div class="screen-showcase__item" style="flex: 1; min-width: 180px; max-width: 220px;">
-            <img src="images/v2-onboarding.png" alt="PureLoop V2 — Onboarding Screen" style="border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); width: 100%; display: block;">
+            <img src="images/v2-onboarding.webp" alt="PureLoop V2 — Onboarding Screen" style="border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); width: 100%; display: block;" loading="lazy" decoding="async">
             <p class="screen-showcase__caption" style="text-align: center; margin-right: 20px;">Welcome Screen</p>
           </div>
         </div>
@@ -718,30 +717,30 @@
         <div class="screen-showcase">
           <!-- 152210 -->
           <div class="screen-showcase__item">
-            <img src="images/Screenshot%202026-07-05%20152210.png" alt="PureLoop V2 App Screen" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block;">
+            <img src="images/Screenshot%202026-07-05%20152210.webp" alt="PureLoop V2 App Screen" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block;" loading="lazy" decoding="async">
             <p class="screen-showcase__caption">Provider Profile</p>
           </div>
           <!-- Booking Flow -->
           <div class="screen-showcase__item">
-            <img src="images/v2-booking-1.png" alt="PureLoop V2 Booking Step 1" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block;">
+            <img src="images/v2-booking-1.webp" alt="PureLoop V2 Booking Step 1" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block;" loading="lazy" decoding="async">
             <p class="screen-showcase__caption">Booking Details</p>
           </div>
           <div class="screen-showcase__item">
-            <img src="images/v2-booking-2.png" alt="PureLoop V2 Booking Step 2" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block;">
+            <img src="images/v2-booking-2.webp" alt="PureLoop V2 Booking Step 2" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block;" loading="lazy" decoding="async">
             <p class="screen-showcase__caption">Wash Preferences</p>
           </div>
           <div class="screen-showcase__item">
-            <img src="images/v2-booking-3.png" alt="PureLoop V2 Booking Step 3" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block;">
+            <img src="images/v2-booking-3.webp" alt="PureLoop V2 Booking Step 3" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block;" loading="lazy" decoding="async">
             <p class="screen-showcase__caption">Schedule Pickup</p>
           </div>
           <!-- 152314 -->
           <div class="screen-showcase__item">
-            <img src="images/Screenshot%202026-07-05%20152314.png" alt="PureLoop V2 App Screen" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block;">
+            <img src="images/Screenshot%202026-07-05%20152314.webp" alt="PureLoop V2 App Screen" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block;" loading="lazy" decoding="async">
             <p class="screen-showcase__caption">Payment Screen</p>
           </div>
           <!-- 152353 -->
           <div class="screen-showcase__item">
-            <img src="images/Screenshot%202026-07-05%20152353.png" alt="PureLoop V2 App Screen" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block;">
+            <img src="images/Screenshot%202026-07-05%20152353.webp" alt="PureLoop V2 App Screen" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block;" loading="lazy" decoding="async">
             <p class="screen-showcase__caption">Live Tracking</p>
           </div>
         </div>
@@ -756,15 +755,15 @@
         </div>
         <div class="screen-showcase">
           <div class="screen-showcase__item">
-            <img src="images/v2-buffer-hold.png" alt="PureLoop V2 Buffer Hold" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block; border: 1px dashed rgba(255,255,255,0.2);">
+            <img src="images/v2-buffer-hold.webp" alt="PureLoop V2 Buffer Hold" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block; border: 1px dashed rgba(255,255,255,0.2);" loading="lazy" decoding="async">
             <p class="screen-showcase__caption">Buffer Hold UI</p>
           </div>
           <div class="screen-showcase__item">
-            <img src="images/v2-order-history.png" alt="PureLoop V2 Order History" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block; border: 1px dashed rgba(255,255,255,0.2);">
+            <img src="images/v2-order-history.webp" alt="PureLoop V2 Order History" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block; border: 1px dashed rgba(255,255,255,0.2);" loading="lazy" decoding="async">
             <p class="screen-showcase__caption">Order History</p>
           </div>
           <div class="screen-showcase__item">
-            <img src="images/v2-receipt.png" alt="PureLoop V2 Itemized Receipt" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block; border: 1px dashed rgba(255,255,255,0.2);">
+            <img src="images/v2-receipt.webp" alt="PureLoop V2 Itemized Receipt" style="border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); width: 100%; height: auto; display: block; border: 1px dashed rgba(255,255,255,0.2);" loading="lazy" decoding="async">
             <p class="screen-showcase__caption">Itemized Receipt</p>
           </div>
         </div>
